@@ -55,7 +55,6 @@ export class GitRepository {
         let currentCommit = this.HEAD;
         let history = [];
         while (currentCommit != null) {
-            const branch = this.branches.find(b => b.commit === currentCommit);
             history.push(currentCommit);
             currentCommit = currentCommit.parent;
         }
